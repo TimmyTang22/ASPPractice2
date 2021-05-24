@@ -1,0 +1,153 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.margin-btm{
+    margin-bottom : 50px;
+}
+
+.footer {
+    color: white;
+}
+.nav > li {
+    display: flex;
+}
+
+hr {
+    border-top: 1px solid rgba(0,0,0,1);
+}
+
+.navbar-img {
+    width: 15px;
+}
+
+.swiper-slide-img {
+    width: 20vw;
+    height: 20vw;
+    min-height: 200px;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+
+.talk-bubble {
+    background-color: white;
+    border-radius: 25px;
+    margin: 0 50px;
+    padding: 15px;
+}
+
+.human-arm-up {
+    height: 100px;
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.card-custom {
+    overflow: hidden;
+    min-height: auto;
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    background-color:white;
+    margin: 0 70px;
+}
+
+.card-custom-img {
+    height: 200px;
+    min-height: 200px;
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-color: inherit;
+}
+
+.home-margin {
+    margin-top: 20%;
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+    position: relative;
+    content: '';
+    top: 225px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-top-width: 25px;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: calc(1000px - 1vw);
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: inherit;
+}
+
+.red-border {
+    border-color: red;
+}
+
+.purple-border {
+    border-color: purple;
+}
+
+.prof-img {
+    width: 100%;
+}
+
+.click-btn {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 50%;
+    width: 80%;
+    color: white;
+    background-color: Highlight;
+    border-radius: 25px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+#Home {
+    background-color: lawngreen;
+}
+
+#About {
+    background-color: darkgreen;
+}
+
+#Education {
+    background-color: cornflowerblue;
+}
+
+#Skills {
+    background-color: darkcyan;
+}
+
+#Protfolio {
+    background-color: forestgreen;
+}

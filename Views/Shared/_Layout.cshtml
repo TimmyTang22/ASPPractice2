@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Timmy Tang</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="~/Image/icon/t.svg" type="image/ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Lato', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto Slab', serif;
+        }
+
+
+        .swiper-container {
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body id='@(ViewData["Title"] ?? "")'>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Timmy Tang", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <img src="~/Image/icon/home.svg" class="navbar-img" />
+                        @Html.ActionLink("Home", "Index", "Home")
+                    </li>
+                    <li>
+                        <img src="~/Image/icon/user.svg" class="navbar-img" />
+                        @Html.ActionLink("About Me", "About", "Home")
+                    </li>
+                    <li>
+                        <img src="~/Image/icon/edu.svg" class="navbar-img" />
+                        @Html.ActionLink("Education", "Education", "Home")
+                    </li>
+                    <li>
+                        <img src="~/Image/icon/skills.svg" class="navbar-img" />
+                        @Html.ActionLink("Skills", "Skills", "Home")
+                    </li>
+                    <li>
+                        <img src="~/Image/icon/pro.svg" class="navbar-img" />
+                        @Html.ActionLink("Protfolio", "Protfolio", "Home")
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="margin-btm">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="footer navbar navbar-fixed-bottom navbar-inverse">
+        <div class="container" style="margin: 15px auto;">
+            &copy; @DateTime.Now.Year - Timmy Tang
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
